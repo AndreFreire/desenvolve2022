@@ -1,0 +1,18 @@
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+
+String.prototype.addSpace = function() {
+    return this.split('').join(' ')
+}
+
+function forca() {
+    chances = 6
+    palavras = ['abacaxi','manga', 'maca', 'banana', 'uva', 'laranja', 'limao', 'pera', 'kiwi', 'melancia']
+    palavra_escolhida = palavras[Math.floor(Math.random() * palavras.length)]
+
+    palavra_escondida = "_".repeat(palavra_escolhida.length)
+
+    alert(palavra_escondida.addSpace() + " \n chances "+ chances);
+
+}

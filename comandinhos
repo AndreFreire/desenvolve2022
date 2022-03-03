@@ -1,0 +1,36 @@
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+} 
+
+//"teste".replaceAt(2,"z") // troca o caractere do indice 
+// tezte
+
+String.prototype.addSpace = function() {
+    return this.split('').join(' ')
+}// adicionar espaço entre caracteres
+//"teste".addSpace()
+// t e s t e
+
+palavras = ['abacaxi','manga', 'maca', 'banana', 'uva', 'laranja', 'limao', 'pera', 'kiwi', 'melancia'] //lista de palavras
+palavra_escolhida = palavras[Math.floor(Math.random() * palavras.length)] // selecionar uma palavra aleatoriamente 
+
+palavra_escondida = "_".repeat(palavra_escolhida.length) // cria uma string com _ do mesmo tamanho da palavra palavra_escolhida
+
+
+
+//palavra_escondida.indexOf('a')// verifica em qual indice da string esta o caracter do parametro
+// "teste".indexOf('s') 
+// 2
+// "teste".indexOf('z')
+// -1
+
+palavra = prompt("digite a palavra") //mostra um alert com a mensagem e uma caixa para texto que irá para a variavel
+
+"teste".length // retorna o tamanho da string ou array
+
+"teste"[3] // retorna o caracter da posição 3
+["teste1", "teste2", "teste3"][2]// retorna o registro da posição 2 do array
+
+
+
+
