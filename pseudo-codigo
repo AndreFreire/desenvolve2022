@@ -1,0 +1,14 @@
+escolher uma palavra
+falar quantas letras tem essa palavra 
+falar quantas chances a pessoa tem 
+enquanto a pessoa tiver chance e faltar descobrir alguma letra da palavra
+    pedi um letra 
+    verificar se a letra esta contida na palavra escolhida
+    se estiver contida
+        mostrar em quais posicoes a letra esta na palavra
+        se se a palavra estiver completa
+            informa que ganhou
+    se não
+        perde uma chance 
+        se a chances acabarem
+            informa que perdeu
