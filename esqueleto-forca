@@ -7,7 +7,7 @@ String.prototype.addSpace = function() {
 }
 
 function forca() {
-    chances = 6
+    chances = 5
     palavras = ['abacaxi','manga', 'maca', 'banana', 'uva', 'laranja', 'limao', 'pera', 'kiwi', 'melancia']
     palavra_escolhida = palavras[Math.floor(Math.random() * palavras.length)]
 
