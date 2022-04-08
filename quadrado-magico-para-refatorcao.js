@@ -1,69 +1,69 @@
 function magicSquare3x3(square) {
-    soma0 = square[0][0] +square[0][1] + square[0][2];
-    soma1 = square[1][0] +square[1][1] + square[1][2];
+    let soma0 = square[0][0] + square[0][1] + square[0][2];
+    let soma1 = square[1][0] + square[1][1] + square[1][2];
     
-    verdadeiro = true
-    falso = false
-    contador = 0
+    let retorno;
+    let contador = 0
+
     if (soma0 == soma1) {
-        soma2 = square[2][0] +square[2][1] + square[2][2];
-        contador = contador + 1
+        let soma2 = square[2][0] + square[2][1] + square[2][2];
+        contador += 1
         if (soma1 == soma2) {
-            contador = contador + 2
-            soma3 = square[0][0] +square[1][0] + square[2][0];
+            contador += 2
+            let soma3 = square[0][0] + square[1][0] + square[2][0];
             if (soma2 == soma3) {
-                contador = contador + 3
-                soma4 = square[0][1] +square[1][1] + square[2][1];
+                contador +=  3
+                let soma4 = square[0][1] + square[1][1] + square[2][1];
                 if (soma3 == soma4) {
-                    contador = contador + 4
-                    soma5 = square[0][2] +square[1][2] + square[2][2];
+                    contador += 4
+                    let soma5 = square[0][2] + square[1][2] + square[2][2];
                     if (soma4 == soma5) {
-                        contador = contador + 5
-                        soma6 = square[0][0] +square[1][1] + square[2][2];
+                        contador += 5
+                        let soma6 = square[0][0] + square[1][1] + square[2][2];
                         if (soma5 == soma6) {
-                            contador = contador + 6
-                            soma7 = square[2][0] +square[1][1] + square[0][2];
+                            contador +=  6
+                            let soma7 = square[2][0] + square[1][1] + square[0][2];
                             if (soma6 == soma7) {
-                                contador = contador + 7
+                                contador +=  7
                             } else {
                                 contador = 0
                                 console.log("Quadrado não magico");
-                                retorno = falso;
+                                retorno = false;
                                 return retorno;
                             }
                         } else {
                             console.log("Quadrado não magico");
-                            retorno = falso;
+                            retorno = false;
                             return retorno;
                         }
                     } else {
                         console.log("Quadrado não magico");
-                        retorno = falso;
+                        retorno = false;
                         return retorno;
                     }
                 } else {
                     console.log("Quadrado não magico");
-                    retorno = falso;
+                    retorno = false;
                     return retorno;
                 }
             } else {
                 console.log("Quadrado não magico");
-                retorno = falso;
+                retorno = false;
                 return retorno;
             }
         } else {
             console.log("Quadrado não magico");
-            retorno = falso;
+            retorno = false;
             return retorno;
         }
     } else {
         console.log("Quadrado não magico");
-        retorno = falso;
+        retorno = false;
         return retorno;
     }
     if ( contador == 28) {
         console.log("Quadrado magico");
-        retorno = verdadeiro;
+        retorno = true;
         return retorno;
     }
 }
