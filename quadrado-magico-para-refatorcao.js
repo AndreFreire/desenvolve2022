@@ -1,77 +1,28 @@
 function magicSquare3x3(square) {
     let soma0 = square[0][0] + square[0][1] + square[0][2];
     let soma1 = square[1][0] + square[1][1] + square[1][2];
+    let soma2 = square[2][0] + square[2][1] + square[2][2];
+    let soma3 = square[0][0] + square[1][0] + square[2][0];
+    let soma4 = square[0][1] + square[1][1] + square[2][1];
+    let soma5 = square[0][2] + square[1][2] + square[2][2];
+    let soma6 = square[0][0] + square[1][1] + square[2][2];
+    let soma7 = square[2][0] + square[1][1] + square[0][2];
     
     let retorno;
-    let contador = 0
 
-    if (soma0 == soma1) {
-        let soma2 = square[2][0] + square[2][1] + square[2][2];
-        contador += 1
-        if (soma1 == soma2) {
-            contador += 2
-            let soma3 = square[0][0] + square[1][0] + square[2][0];
-            if (soma2 == soma3) {
-                contador +=  3
-                let soma4 = square[0][1] + square[1][1] + square[2][1];
-                if (soma3 == soma4) {
-                    contador += 4
-                    let soma5 = square[0][2] + square[1][2] + square[2][2];
-                    if (soma4 == soma5) {
-                        contador += 5
-                        let soma6 = square[0][0] + square[1][1] + square[2][2];
-                        if (soma5 == soma6) {
-                            contador +=  6
-                            let soma7 = square[2][0] + square[1][1] + square[0][2];
-                            if (soma6 == soma7) {
-                                contador +=  7
-                            } else {
-                                contador = 0
-                                console.log("Quadrado não magico");
-                                retorno = false;
-                                return retorno;
-                            }
-                        } else {
-                            console.log("Quadrado não magico");
-                            retorno = false;
-                            return retorno;
-                        }
-                    } else {
-                        console.log("Quadrado não magico");
-                        retorno = false;
-                        return retorno;
-                    }
-                } else {
-                    console.log("Quadrado não magico");
-                    retorno = false;
-                    return retorno;
-                }
-            } else {
-                console.log("Quadrado não magico");
-                retorno = false;
-                return retorno;
-            }
-        } else {
-            console.log("Quadrado não magico");
-            retorno = false;
-            return retorno;
-        }
+    if (soma1 == soma2 && soma2 == soma3 && soma3 == soma4 && soma4 == soma5 && soma5 == soma6 && soma6 == soma7 ) {
+        console.log("Quadrado magico")
+        retorno = true;
+        return retorno
     } else {
         console.log("Quadrado não magico");
         retorno = false;
         return retorno;
     }
-    if ( contador == 28) {
-        console.log("Quadrado magico");
-        retorno = true;
-        return retorno;
-    }
+    
 }
 
-
-////////////////////////////////////////
-/////NÃO ALTERAR DAQUI PARA BAIXO///////
-////////////////////////////////////////
+//NÃO ALTERAR DAQUI PARA BAIXO
 
 square = [[2, 7, 6], [9,5,1],[4,3,8]]
 console.log("Esperado: quadrado magico")
@@ -104,7 +55,6 @@ t7 = magicSquare3x3(square)
 square = [[7,5,3], [6,1,8], [2,9,4]]
 console.log("Esperado: quadrado NAO magico")
 t8 = magicSquare3x3(square) 
-
 
 if(t1&&t2&&t3&&t4&&!t5&&!t6&&!t7&&!t8) {
     console.log("\nSEU CÓDIGO FUNCIONA, PARABENS!");
